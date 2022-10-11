@@ -34,7 +34,7 @@ public class DevelopmentApplicationModel
   public SiteModel DevelopmentSite{get;set;}
   public List<ContactModel> DevelopmentContact{get;set;}
   public ExistingDetailsModel ExistingDevelopment{get;set;}
-  public ProposedDetailsModel ProposedDevelopment{get;set;}
+  public ProposalDetailsModel ProposalDevelopment{get;set;}
 
 }
 

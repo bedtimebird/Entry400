@@ -1,7 +1,7 @@
 public class DesignModel
 {
 
-  public DesignModel(string lot, int parkingTotal)
+  public DesignModel(decimal lot, int parkingTotal)
   {
     LotCoverage = lot;
     TotalVehicleParking = parkingTotal;

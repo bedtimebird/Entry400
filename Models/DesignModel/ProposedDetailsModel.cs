@@ -1,10 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-//namespace DevDetailModel;
-
-// 
-
 public class ProposalDetailsModel : DevDetailModel
 {
   public ProposalDetailsModel(decimal tGFA)

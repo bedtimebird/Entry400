@@ -7,7 +7,7 @@ class Program {
       // Test ZoneModel
       ZoneModel bob = new ZoneModel();
       List<ZoneModel> master = new List<ZoneModel>();
-      master = bob.ReturnZones();
+      master = bob.CoquitlamZones();
       foreach(var zone in master)
       {
         Console.WriteLine(zone.Zone + " " + zone.ProjectClass + " " + zone.City);
