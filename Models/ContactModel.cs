@@ -1,15 +1,5 @@
 public class ContactModel
 {
-  public string FirstName{get;set;}
-  public string LastName{get;set;}
-  public string Employer{get;set;}
-  public string Profession{get;set;}
-  public string Address{get;set;}
-  public string City{get;set;}
-  public string PostalCode{get;set;}
-  public string PriPhone{get;set;}
-  public string SecPhone{get;set;}
-  public string Email{get;set;}
 
   public ContactModel(string first, string last, string primaryPhone, string email)
   {
@@ -21,10 +11,22 @@ public class ContactModel
   
   public ContactModel(){}
 
-  public ContactModel TempContactData()
+  public override string ToString()
   {
-    ContactModel bob = new ContactModel("Bob", "Builder", "999-492-9234", "bobbyB@gmail.com");
-    return bob;
+    return $"First name: {FirstName}\n" + 
+      $"Last name: {LastName}\n" + 
+      $"Primary number: {PriPhone}\n" + 
+      $"Email address: {Email}";
   }
   
+  public string FirstName{get;set;}
+  public string LastName{get;set;}
+  public string Employer{get;set;}
+  public string Profession{get;set;}
+  public string Address{get;set;}
+  public string City{get;set;}
+  public string PostalCode{get;set;}
+  public string PriPhone{get;set;}
+  public string SecPhone{get;set;}
+  public string Email{get;set;}
 }
