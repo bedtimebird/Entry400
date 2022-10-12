@@ -2,6 +2,16 @@ using System.Collections.Generic;
 
 public class LotModel
 {
+
+  public LotModel(string address, string city, string province, string postalCode)
+  {
+    Address = address;
+    City = city;
+    Province = province; 
+    PostalCode = postalCode;
+  }
+  public LotModel(){}
+  
   public string Address{get;set;}
   public string City{get;set;}
   public string Province{get;set;}
@@ -19,20 +29,5 @@ public class LotModel
   public ZoneModel Zoning{get;set;}
   public AreaPlanModel AreaPlan{get;set;}
 
-  public LotModel(string address, string city, string province, string postalCode)
-  {
-    Address = address;
-    City = city;
-    Province = province; 
-    PostalCode = postalCode;
-  }
-  public LotModel(){
-    
-  }
-
-  public LotModel TempLotData()
-  {
-    LotModel temp = new LotModel("443 Forest Road", "Coquitlam", "BC", "F4L 3L1");
-    return temp;
-  }
+  
 }

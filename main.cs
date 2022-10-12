@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 class Program {
     static void Main(string[] args) {
-
-      UI.InitialGreeting();
+      Interface newSession = new Interface();
+      newSession.InitialGreeting();
       Console.ReadLine();
         
     }
