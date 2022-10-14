@@ -11,6 +11,11 @@ public class ContactModel
   
   public ContactModel(){}
 
+  public string BasicContactOutput(ContactModel c)
+  {
+    return ($"Name: {c.FirstName} {c.LastName}");
+  }
+
   public override string ToString()
   {
     return $"First name: {FirstName}\n" + 

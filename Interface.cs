@@ -12,6 +12,84 @@ public class Interface
     OverviewOptions();
   }
 
+  public void SiteOptions()
+  {
+    Console.WriteLine("");
+    Console.WriteLine("The following options are available: ");
+    Console.WriteLine("1. List all active sites");
+    Console.WriteLine("2. Add new site");
+    Console.WriteLine("3. Remove site");
+    Console.WriteLine("8. Insert temporary data");
+    Console.WriteLine("9. Return back to options menu");
+    int selection = int.Parse(UserInput.GetInfo(""));
+    SiteSelection(selection);
+  }
+
+  public void SiteSelection(int number)
+  {
+    switch(number)
+    {
+      case 1:
+        newSession.DisplayAllSite();
+        SiteOptions();
+        break;
+      case 2:
+        newSession.EnterNewLots();
+        SiteOptions();
+        break;
+      case 3:
+        newSession.RemoveContact();
+        SiteOptions();
+        break;
+      case 8:
+        newSession.InsertTempSiteData();
+        SiteOptions();
+        break;
+      case 9:
+        OverviewOptions();
+        break;
+    }
+  }
+
+  public void ContactOptions()
+  {
+    Console.WriteLine("");
+    Console.WriteLine("The following options are available: ");
+    Console.WriteLine("1. List all contacts");
+    Console.WriteLine("2. Add new contact");
+    Console.WriteLine("3. Remove contact");
+    Console.WriteLine("4. Assign contact to development application");
+    Console.WriteLine("8. Insert temporary data");
+    Console.WriteLine("9. Return back to options menu");
+    int selection = int.Parse(UserInput.GetInfo(""));
+    ContactSelection(selection);
+  }
+
+  public void ContactSelection(int number)
+  {
+    switch(number)
+    {
+      case 1:
+        newSession.DisplayAllContacts();
+        ContactOptions();
+        break;
+      case 2:
+        newSession.EnterNewContact();
+        ContactOptions();
+        break;
+      case 3:
+        newSession.RemoveContact();
+        ContactOptions();
+        break;
+      case 8:
+        newSession.InsertTempContactData();
+        ContactOptions();
+        break;
+      case 9:
+        OverviewOptions();
+        break;
+    }
+  }
   public void OverviewOptions()
   {
     //int contacts = newSession.Count;
@@ -24,45 +102,19 @@ public class Interface
     int selection = int.Parse(UserInput.GetInfo(""));
     OverviewSelection(selection);
   }
-
-  public void ContactOptions()
-  {
-    Console.WriteLine("");
-  }
-
   public void OverviewSelection(int number)
   {
-    // add new contact
-    if(number == 1)
+    switch(number)
     {
-      newSession.EnterNewContact();
-      Console.WriteLine("Details recorded");
-      //Console.WriteLine(newContact.ToString());
-      OverviewOptions();
-    } 
-    // 
-    else if (number == 2)
-    {
-      
-    }
-    // List all applications
-    else if (number == 3)
-    {
-      foreach(var item in newSession.currentContacts)
-      {
-        Console.WriteLine(item.ToString());
-        Console.WriteLine(" ");
-      }
-      OverviewOptions();
-    }
-    else if (number == 9) 
-    {
-      Console.WriteLine("Goodbye");
-    }
-    else 
-    {
-      Console.WriteLine("Sorry that option is currently unavailable");
-      Console.WriteLine("Goodbye");
+      case 1:
+        ContactOptions();
+        break;
+      case 2:
+        SiteOptions();
+        break;
+      case 9:
+        Console.WriteLine("Goobye");
+        break;
     }
   }
 }

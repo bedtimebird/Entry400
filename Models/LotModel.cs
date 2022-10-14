@@ -2,13 +2,11 @@ using System.Collections.Generic;
 
 public class LotModel
 {
-
-  public LotModel(string address, string city, string province, string postalCode)
+  public LotModel(string address, string city, string province)
   {
     Address = address;
     City = city;
-    Province = province; 
-    PostalCode = postalCode;
+    Province = province;
   }
   public LotModel(){}
   
