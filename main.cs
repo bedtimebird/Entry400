@@ -9,3 +9,10 @@ class Program {
         
     }
 }
+
+// 1. Edit Sites and Lot information
+// 2. Complete and test options for Site
+// 3. Complete and test options for Contact
+// 4. Complete and test options for Lot
+//
+//

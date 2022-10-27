@@ -4,7 +4,8 @@ using System.Linq;
 
 public class Interface
 {
-  public BasicLogic newSession = new BasicLogic();
+  public ContactLogic contactSession = new ContactLogic();
+  public SiteLogic siteSession = new SiteLogic();
 
   public void InitialGreeting()
   {
@@ -19,6 +20,7 @@ public class Interface
     Console.WriteLine("1. List all active sites");
     Console.WriteLine("2. Add new site");
     Console.WriteLine("3. Remove site");
+    Console.WriteLine("4. Edit site");
     Console.WriteLine("8. Insert temporary data");
     Console.WriteLine("9. Return back to options menu");
     int selection = int.Parse(UserInput.GetInfo(""));
@@ -30,19 +32,23 @@ public class Interface
     switch(number)
     {
       case 1:
-        newSession.DisplayAllSite();
+        siteSession.DisplayAllSite();
         SiteOptions();
         break;
       case 2:
-        newSession.EnterNewLots();
+        siteSession.EnterNewSite();
         SiteOptions();
         break;
       case 3:
-        newSession.RemoveContact();
+        siteSession.RemoveSite();
+        SiteOptions();
+        break;
+      case 4:
+        siteSession.EditSite();
         SiteOptions();
         break;
       case 8:
-        newSession.InsertTempSiteData();
+        siteSession.InsertTempSiteData();
         SiteOptions();
         break;
       case 9:
@@ -70,19 +76,19 @@ public class Interface
     switch(number)
     {
       case 1:
-        newSession.DisplayAllContacts();
+        contactSession.DisplayAllContacts();
         ContactOptions();
         break;
       case 2:
-        newSession.EnterNewContact();
+        contactSession.EnterNewContact();
         ContactOptions();
         break;
       case 3:
-        newSession.RemoveContact();
+        contactSession.RemoveContact();
         ContactOptions();
         break;
       case 8:
-        newSession.InsertTempContactData();
+        contactSession.InsertTempContactData();
         ContactOptions();
         break;
       case 9:

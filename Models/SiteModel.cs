@@ -14,8 +14,9 @@ public class SiteModel
     StreamSide = ParseBool(streamSide);
   }
   
-  public SiteModel(List<LotModel> lots)
+  public SiteModel(string primary, List<LotModel> lots)
   {
+    PrimaryAddress = primary;
     SiteAddress = lots;
   }
 
@@ -44,6 +45,7 @@ public class SiteModel
     }
   }
   
+  public string PrimaryAddress{get;set;}
   public List<LotModel> SiteAddress{get;set;}
   public decimal Area{get;set;}
   public decimal Frontage{get;set;}
