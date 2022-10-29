@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 public class SiteModel
@@ -18,6 +19,10 @@ public class SiteModel
   {
     PrimaryAddress = primary;
     SiteAddress = lots;
+    ExistingStructure = null;
+    Floodplain = null;
+    SteepSlope = null;
+    StreamSide = null;
   }
 
   public SiteModel(){}
@@ -50,10 +55,10 @@ public class SiteModel
   public decimal Area{get;set;}
   public decimal Frontage{get;set;}
   public decimal Depth{get;set;}
-  public bool ExistingStructure{get;set;}
-  public bool Floodplain{get;set;}
-  public bool SteepSlope{get;set;}
-  public bool StreamSide{get;set;}
+  public Nullable<bool> ExistingStructure{get;set;}
+  public Nullable<bool> Floodplain{get;set;}
+  public Nullable<bool> SteepSlope{get;set;}
+  public Nullable<bool> StreamSide{get;set;}
   public Enums.StructureStatus Structure{get;set;}
 
 }

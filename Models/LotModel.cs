@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 public class LotModel
@@ -7,6 +8,8 @@ public class LotModel
     Address = address;
     City = city;
     Province = province;
+    Owner = new List<ContactModel>();
+    ExistingBuilding = null;
   }
   public LotModel(){}
   
@@ -17,7 +20,7 @@ public class LotModel
   public List<ContactModel> Owner{get;set;}
   public string PropertyID{get;set;}
   public decimal LotArea{get;set;}
-  public bool ExistingBuilding{get;set;}
+  public Nullable<bool> ExistingBuilding{get;set;}
   public string LegalDescription{get;set;}
   public string Block{get;set;}
   public string Plan{get;set;}
