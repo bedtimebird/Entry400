@@ -6,6 +6,23 @@ public class ConsoleOutput
 {
   public static string header = new string('-', 40);
   public static string headerShort = new string('-', 20);
+
+  public static string PrintBasicPersonContact(PersonContactModel person)
+  {
+    string output = person.FirstName + " " + person.LastName;
+    return output;
+  }
+
+  public static void PrintProgramWelcome()
+  {
+    Console.WriteLine(header);
+    Console.WriteLine("Welcome to the development application assistance program");
+    Console.WriteLine(header);
+    Console.WriteLine("You must login or create a new account before proceeding");
+    Console.WriteLine("(1) Login");
+    Console.WriteLine("(2) Create new account");
+    Console.WriteLine("(99) Exit");
+  }
   
   public static void PrintSiteModel(SiteModel site)
   {
@@ -54,10 +71,11 @@ public class ConsoleOutput
     Console.WriteLine(String.Format("{0,-5}{1,-20}{2,1}", "(11)", "Plan:", lot.Plan));
     Console.WriteLine(String.Format("{0,-5}{1,-20}{2,1}", "(12)", "Lot:", lot.Lot));
     Console.WriteLine(headerShort);
-    Console.WriteLine(String.Format("{0,-4}{1,-20}{2,1}", "(13)", "Plan Area:", lot.PlanArea));
-    Console.WriteLine(String.Format("{0,-4}{1,-20}{2,1}", "(14)", "Parcel ID:", lot.ParcelID));
-    Console.WriteLine(String.Format("{0,-4}{1,-20}{2,1}", "(15)", "Zoning:", lot.Zoning));
-    Console.WriteLine(String.Format("{0,-4}{1,-20}{2,1}", "(16)", "Area Plan:", lot.AreaPlan));
+    Console.WriteLine(String.Format("{0,-5}{1,-20}{2,1}", "(13)", "Plan Area:", lot.PlanArea));
+    Console.WriteLine(String.Format("{0,-5}{1,-20}{2,1}", "(14)", "Parcel ID:", lot.ParcelID));
+    Console.WriteLine(String.Format("{0,-5}{1,-20}{2,1}", "(15)", "Zoning:", lot.Zoning));
+    Console.WriteLine(String.Format("{0,-5}{1,-20}{2,1}", "(16)", "Area Plan:", lot.AreaPlan));
+    Console.WriteLine(String.Format("{0,-5}{1,-20}{2,1}", "(99)", "Exit:", lot.AreaPlan));
     Console.WriteLine(header);
   }
   

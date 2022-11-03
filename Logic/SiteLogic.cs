@@ -54,6 +54,7 @@ public class SiteLogic
       case 1:
         Console.WriteLine("Current Value: " + currentSites.ElementAt(rec).SiteAddress.ElementAt(lot).Address);
         currentSites.ElementAt(rec).SiteAddress.ElementAt(lot).Address = UserInput.ModifyString("Enter new address: ");
+        EditSite();
         break;
       case 2:
         Console.WriteLine("Current Value: " + currentSites.ElementAt(rec).SiteAddress.ElementAt(lot).City);
@@ -66,9 +67,11 @@ public class SiteLogic
       case 4:
         Console.WriteLine("Current Value: " + currentSites.ElementAt(rec).SiteAddress.ElementAt(lot).PostalCode);
         currentSites.ElementAt(rec).SiteAddress.ElementAt(lot).PostalCode = UserInput.ModifyString("Enter new Postal Code: ");
+        EditSite();
         break;
       case 5:
         //CREATE METHOD TO ADD MORE OWNERS
+        Console.WriteLine("Method not complete");
         break;
       case 6:
         Console.WriteLine("Current Value: " + currentSites.ElementAt(rec).SiteAddress.ElementAt(lot).PropertyID);
@@ -76,11 +79,7 @@ public class SiteLogic
         break;
       case 7:
         Console.WriteLine("Current Value: " + currentSites.ElementAt(rec).SiteAddress.ElementAt(lot).LotArea);
-        currentSites.ElementAt(rec).SiteAddress.ElementAt(lot).LotArea = UserInput.ModifyDecimal("Enter new Property ID: ");
-        break;
-      case 8:
-        Console.WriteLine("Current Value: " + currentSites.ElementAt(rec).StreamSide);
-        currentSites.ElementAt(rec).StreamSide = UserInput.ModifyBool("Is there an existing structure (y/n): ");
+        currentSites.ElementAt(rec).SiteAddress.ElementAt(lot).LotArea = UserInput.ModifyDecimal("Enter Lot Area: ");
         break;
       case 8:
         Console.WriteLine("Current Value: " + currentSites.ElementAt(rec).StreamSide);
@@ -117,7 +116,11 @@ public class SiteLogic
       case 16:
         // TO BE ADDRESSED
         // Same as case 15 - loop through list of Area Plan Models
-        break;
+      break;
+      case 99:
+        // TO BE ADDRESSED
+        // Same as case 15 - loop through list of Area Plan Models
+      break;
     }
   }
 

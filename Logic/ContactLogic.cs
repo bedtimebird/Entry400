@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 
-public class ContactLogic : BasicLogic
+public class ContactLogic
 {
-  public List<ContactModel> currentContacts = new List<ContactModel>();
+  public List<PersonContactModel> currentContacts = new List<PersonContactModel>();
   
   public void EnterNewContact()
   {
-    ContactModel contact = new ContactModel();
+    PersonContactModel contact = new PersonContactModel();
     contact.FirstName = UserInput.GetInfo("Enter first name: ");
     contact.LastName = UserInput.GetInfo("Enter last name: ");
     contact.PriPhone = UserInput.GetInfo("Enter primary phone number: ");
@@ -28,9 +28,9 @@ public class ContactLogic : BasicLogic
   {
     Console.WriteLine("Please select contact to remove: ");
     int count = 1;
-    foreach(var item in currentContacts)
+    foreach(var contact in currentContacts)
       {
-        Console.WriteLine($"{count}: {item.BasicContactOutput(item)}");
+        Console.WriteLine($"{count}: {ConsoleOutput.PrintBasicPersonContact(contact)}");
         count += 1;
       }
     int bob;
@@ -41,10 +41,10 @@ public class ContactLogic : BasicLogic
 
   public void InsertTempContactData()
   {
-    ContactModel person1 = new ContactModel("Auston", "Matthews", "999", "AM34@gmail.com");
-    ContactModel person2 = new ContactModel("Cale", "Makar", "999", "CK8@gmail.com");
-    ContactModel person3 = new ContactModel("Igor", "Shesterkin", "999", "IG31@gmail.com");
-    ContactModel person4 = new ContactModel("Moritz", "Seider", "999", "MS53@gmail.com");
+    PersonContactModel person1 = new PersonContactModel("Auston", "Matthews", "999", "AM34@gmail.com");
+    PersonContactModel person2 = new PersonContactModel("Cale", "Makar", "999", "CK8@gmail.com");
+    PersonContactModel person3 = new PersonContactModel("Igor", "Shesterkin", "999", "IG31@gmail.com");
+    PersonContactModel person4 = new PersonContactModel("Moritz", "Seider", "999", "MS53@gmail.com");
     currentContacts.Add(person1);
     currentContacts.Add(person2);
     currentContacts.Add(person3);
