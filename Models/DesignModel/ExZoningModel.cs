@@ -4,10 +4,10 @@ using System.Collections.Generic;
 // Pull land uses + CWOCP + zoning from SiteModel
 // How does that connection work? 
 
-public class ExistingDetailsModel : DevDetailModel
+public class ExZoningModel : DevZoningModel
 {
 
-  public ExistingDetailsModel(decimal tGFA)
+  public ExZoningModel(decimal tGFA)
   {
   TotalGFA = tGFA;
   }

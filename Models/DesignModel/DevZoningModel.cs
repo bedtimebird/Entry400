@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-public class DevDetailModel
+public class DevZoningModel
 {
 
   public decimal TotalGFA{get;set;}

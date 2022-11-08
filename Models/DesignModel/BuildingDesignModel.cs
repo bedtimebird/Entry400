@@ -1,13 +1,13 @@
-public class DesignModel
+public class BuildingDesignModel
 {
 
-  public DesignModel(decimal lot, int parkingTotal)
+  public BuildingDesignModel(decimal lot, int parkingTotal)
   {
     LotCoverage = lot;
     TotalVehicleParking = parkingTotal;
   }
   
-  public DesignModel(){}  
+  public BuildingDesignModel(){}  
   
   public decimal LotCoverage{get;set;} //percentage
   // ISSUE - AmenityIndoor + Outdoor not required for REQUIRED

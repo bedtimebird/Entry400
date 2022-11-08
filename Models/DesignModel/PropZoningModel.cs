@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 
-public class ProposalDetailsModel : DevDetailModel
+public class PropZoningModel : DevZoningModel
 {
-  public ProposalDetailsModel(decimal tGFA)
+  public PropZoningModel(decimal tGFA)
   {
   TotalGFA = tGFA;
   }
 
-  public ProposalDetailsModel(){}
+  public PropZoningModel(){}
 
   public List<PermittedUseModel> TargetLandUses {get;set;}
   public List<ZoneModel> TargetZoning {get;set;}

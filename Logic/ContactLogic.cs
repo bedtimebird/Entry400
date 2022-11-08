@@ -17,11 +17,13 @@ public class ContactLogic
 
   public void DisplayAllContacts()
   {
-    foreach(var item in currentContacts)
+    int count = 1;
+    foreach(var contact in currentContacts)
       {
-        Console.WriteLine(item.ToString());
-        Console.WriteLine(" ");
+        Console.WriteLine(count + ". " + ConsoleOutput.PrintBasicPersonContact(contact));
+        count += 1;
       }
+    Console.WriteLine(" ");
   }
 
   public void RemoveContact()
