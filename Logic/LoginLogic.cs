@@ -4,47 +4,65 @@ using System.Linq;
 
 public class LoginLogic
 {
+  int loginAttempt = 0;
+  UserModel user = new UserModel();
 
-  public List<ApplicantModel> applicants = new List<ApplicantModel>();
+  // TODO - create a list of UserModel then populate with static data
+  // then create a method to check email and password against that static list
   
-  public void ProgramStartup()
-  {
-    ConsoleOutput.PrintProgramWelcome();
-    int rec = int.Parse(UserInput.GetInfo("Please selection #: "));
-    if(rec == 1){
-      Login();
-    }
-    else if(rec ==2)
-    {
-      
-    }
-    else
-    {
-      ProgramLogin();
-    }
-  }
-
   public void Login()
   {
     string email = UserInput.GetInfo("Enter email address: ");
     string password = UserInput.GetInfo("Enter password: ");
 
+    bool attempt = ConfirmLoginDetails(email, password);
+    if(attempt == true)
+    {
+      MainMenu session = new MainMenu();
+      session.MainMenuOptions(user);
+    } 
+    else if (attempt == false && loginAttempt < 5)
+    {
+      Login();
+    } 
+    else
+    {
+      ConsoleOutput.PrintProgramExit();
+    }
     
-    // Confirm valid or invalid login/password
-    // if invalid try again - limit 5x tries
-    // if valid - proceed with Userdata - show only projects associated with that user/person
-    Interface newSession = new Interface();
-    newSession.SetupNewSession();
   }
 
-  public void ProgramLogin()
+  public bool ConfirmLoginDetails(string email, string password)
   {
+    bool loginAllowed = false;
+    string DBEmail = "bob";
+    string DBPassword = "123";
+    // confirm with database that details are correct
+    if (DBEmail == email && DBPassword == password)
+    {
+      return loginAllowed = true;
+    } else {
+      loginAttempt +=0;
+      return loginAllowed = false;
+    }
     
   }
 
-  public void CreateNewApplicant()
+  public void NewAccount()
   {
-    
+    UserModel newUser = new UserModel();
+    newUser.UserName = UserInput.GetInfo("Enter username: ");
+    newUser.Password = UserInput.GetInfo("Enter password: ");
+    newUser.FirstName = UserInput.GetInfo("Enter first name: ");
+    newUser.LastName = UserInput.GetInfo("Enter last name: ");
+    newUser.PriPhone = UserInput.GetInfo("Enter primary phone number: ");
+    newUser.Email = UserInput.GetInfo("Enter email address: ");
+    user = newUser;
+  }
+
+  public void RetrievePassword()
+  {
+    // Create method to retrieve password
   }
   
 }

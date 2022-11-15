@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 
 // Class to hold different variations for the way a development could progress
-public class DevAppEstModel
+public class DevVariantModel
 {
-  public DevAppEstModel(string name)
+  public DevVariantModel(string name)
   {
-    EstimateName = name;
+    EstName = name;
   }
   
-  public string EstimateName{get;set;}
+  public string EstName{get;set;}
   public int DisplayOrder{get;set;}
   public SiteModel DevSite{get;set;}
   public DevAppDetailsModel DevDetails{get;set;}

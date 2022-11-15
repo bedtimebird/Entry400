@@ -19,7 +19,7 @@ public class AreaPlanModel
   public CityModel City{get;set;}
   public string Website{get;set;}
   public DateTime DateModified{get;set;}
-  public List<AreaPlanModel> PreviousVersions{get;set;}
+  public List<AreaPlanModel> PreviousVersion{get;set;}
 
   
 }

@@ -12,8 +12,8 @@ public class ExZoningModel : DevZoningModel
   TotalGFA = tGFA;
   }
 
-  public decimal DemoResidentialGFA{get;set;}
-  public decimal DemoCommercialGFA{get;set;}
-  public decimal DemoIndustrialGFA{get;set;}
-  public decimal DemoInstitutionalGFA{get;set;}
+  public decimal DemoResGFA{get;set;}
+  public decimal DemoCommGFA{get;set;}
+  public decimal DemoIndustGFA{get;set;}
+  public decimal DemoInstitGFA{get;set;}
 }

@@ -8,7 +8,7 @@ public class LotModel
     Address = address;
     City = city;
     Province = province;
-    Owner = new List<ContactModel>();
+    Owner = new List<PersonContactModel>();
     ExistingBuilding = null;
   }
   public LotModel(){}

@@ -13,6 +13,13 @@ public class ConsoleOutput
     return output;
   }
 
+  public static void PrintProgramExit()
+  {
+    Console.WriteLine(header);
+    Console.WriteLine("Goodbye");
+    Console.WriteLine(header);
+  }
+
   public static void PrintProgramWelcome()
   {
     Console.WriteLine(header);

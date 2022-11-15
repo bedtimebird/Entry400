@@ -2,11 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-// Class to hold the high level development details - each Ciy extends from this class
+// Class to hold the high level development details
 // also holds a object that contains various development options (DevOpt) where site configurations
 // or other site can be easily compared against each other
 // TODO - future state: create templates for standard development types (6 storey strata / 8 storey rental ect...)
-
 
 public class DevAppModel
 {
@@ -15,13 +14,13 @@ public class DevAppModel
   
   public string ProjName{get;set;}
   public string ProjDesc{get;set;}
+  public bool CompleteApp {get;set;}
+  
   public SiteModel DevSite{get;set;}
   public ApplicantModel Applicant{get;set;}
-  public ExDetailsModel ExDev{get;set;}
-  public PropDetailsModel PropDev{get;set;}
-  public bool CompApp {get;set;}
-  
-  public List<DevAppDetailsModel> DevOpt {get;set;}
+  public DevAppDetailsModel DevDetails{get;set;}
+
+  public List<DevVariantModel> DevVariant {get;set;}
 
 }
 

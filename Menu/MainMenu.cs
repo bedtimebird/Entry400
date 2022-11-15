@@ -4,22 +4,21 @@ using System.Linq;
 
 public class MainMenu
 {
-  // TODO: Populate these objects from database
-  List<SiteModel> devSites = new List<SiteModel>();
-  List<ApplicantModel> devApplicants = new List<SiteModel>();
+  // TODO: Populate this object from database
   List<DevAppModel> devApps = new List<DevAppModel>();
 
   public void MainMenuOptions(UserModel user)
   {
-    //TODO: create method to populate devSites + devApplicants + devApps based on user
+    //TODO: create method to populate devApps based on UserModel
+    devApps = PopulateDevAppList(user);
     Console.WriteLine(ConsoleOutput.headerShort);
-    Console.WriteLine("Welcome to Plermit!");
+    Console.WriteLine("Main Menu");
     //TODO: Create summary view of all permit data on file taken from lists
     Console.WriteLine(ConsoleOutput.headerShort);
     Console.WriteLine("What would you like to do?");
-    Console.WriteLine("1. View/Edit Applicants");
-    Console.WriteLine("2. View/Edit Sites");
-    Console.WriteLine("3. View/Edit Development Applications");
+    Console.WriteLine("1. View/Edit Development Applications");
+    Console.WriteLine("2. View/Edit Applicants");
+    Console.WriteLine("3. View/Edit Sites");
     Console.WriteLine("9. Exit");
     int selection = int.Parse(UserInput.GetInfo(""));
     MainMenuSelection(selection);
@@ -55,6 +54,13 @@ public class MainMenu
         OverviewOptions();
         break;
     }
+  }
+
+  public List<DevAppModel> PopulateDevAppList(UserModel user)
+  {
+    List<DevAppModel> devApp = new List<DevAppModel>();
+
+    
   }
   
 }
