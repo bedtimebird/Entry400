@@ -13,24 +13,25 @@ public class ConsoleOutput
     return output;
   }
 
-  public static void PrintProgramExit()
+  public static void DisplayActiveDevelopments(List<DevAppModel> devApps)
+  {
+    Console.WriteLine(headerShort);
+    Console.WriteLine("Active Developments");
+    Console.WriteLine(headerShort);
+    foreach(var item in devApps)
+    {
+      Console.WriteLine(item.ProjName);
+    }
+    Console.WriteLine(headerShort);
+  }
+
+  public static void PrintTitle(string title)
   {
     Console.WriteLine(header);
-    Console.WriteLine("Goodbye");
+    Console.WriteLine(title);
     Console.WriteLine(header);
   }
 
-  public static void PrintProgramWelcome()
-  {
-    Console.WriteLine(header);
-    Console.WriteLine("Welcome to the development application assistance program");
-    Console.WriteLine(header);
-    Console.WriteLine("You must login or create a new account before proceeding");
-    Console.WriteLine("(1) Login");
-    Console.WriteLine("(2) Create new account");
-    Console.WriteLine("(99) Exit");
-  }
-  
   public static void PrintSiteModel(SiteModel site)
   {
     Console.WriteLine(header);

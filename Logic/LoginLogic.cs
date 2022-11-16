@@ -27,7 +27,7 @@ public class LoginLogic
     } 
     else
     {
-      ConsoleOutput.PrintProgramExit();
+      ConsoleOutput.PrintTitle("Goodbye");
     }
     
   }
@@ -35,8 +35,8 @@ public class LoginLogic
   public bool ConfirmLoginDetails(string email, string password)
   {
     bool loginAllowed = false;
-    string DBEmail = "bob";
-    string DBPassword = "123";
+    string DBEmail = "";
+    string DBPassword = "";
     // confirm with database that details are correct
     if (DBEmail == email && DBPassword == password)
     {

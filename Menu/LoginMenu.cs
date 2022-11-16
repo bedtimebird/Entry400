@@ -7,9 +7,7 @@ public class LoginMenu
 
   public void LoginMenuOptions()
   {
-    Console.WriteLine(ConsoleOutput.headerShort);
-    Console.WriteLine("Welcome to Plermit!");
-    Console.WriteLine(ConsoleOutput.headerShort);
+    ConsoleOutput.PrintTitle("Welcome to Plermit");
     Console.WriteLine("What would you like to do?");
     Console.WriteLine("1. Login");
     Console.WriteLine("2. Create new account");
@@ -34,7 +32,7 @@ public class LoginMenu
         login.RetrievePassword();
         break;
       case 9:
-        ConsoleOutput.PrintProgramExit();
+        ConsoleOutput.PrintTitle("Goodbye");
         break;
     }
   }
