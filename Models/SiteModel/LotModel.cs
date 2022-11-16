@@ -17,7 +17,7 @@ public class LotModel
   public string City{get;set;}
   public string Province{get;set;}
   public string PostalCode{get;set;}
-  public List<ContactModel> Owner{get;set;}
+  public List<PersonContactModel> Owner{get;set;}
   public string PropertyID{get;set;}
   public decimal LotArea{get;set;}
   public Nullable<bool> ExistingBuilding{get;set;}

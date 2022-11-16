@@ -5,10 +5,8 @@ using System.Linq;
 public class CoquitlamDevDetails : DevAppDetailsModel
 {
 
-  public CoquitlamDevDetails(string name)
+  public CoquitlamDevDetails()
   {
-    ProjectName = name;
-    CompleteApplication = false;
     City = "Coquitlam";
   }
 

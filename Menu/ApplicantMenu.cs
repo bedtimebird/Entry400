@@ -24,23 +24,14 @@ public class ApplicantMenu
     switch(number)
     {
       case 1:
-        contactSession.DisplayAllContacts();
-        ContactOptions();
         break;
       case 2:
-        contactSession.EnterNewContact();
-        ContactOptions();
         break;
       case 3:
-        contactSession.RemoveContact();
-        ContactOptions();
         break;
       case 8:
-        contactSession.InsertTempContactData();
-        ContactOptions();
         break;
       case 9:
-        OverviewOptions();
         break;
     }
   }

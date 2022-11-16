@@ -24,27 +24,16 @@ public class SiteMenu
     switch(number)
     {
       case 1:
-        siteSession.DisplayAllSite();
-        SiteOptions();
         break;
       case 2:
-        siteSession.EnterNewSite();
-        SiteOptions();
         break;
       case 3:
-        siteSession.RemoveSite();
-        SiteOptions();
         break;
       case 4:
-        siteSession.EditSite();
-        SiteOptions();
         break;
       case 8:
-        siteSession.InsertTempSiteData();
-        SiteOptions();
         break;
       case 9:
-        OverviewOptions();
         break;
     }
   }

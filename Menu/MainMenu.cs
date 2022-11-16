@@ -10,7 +10,7 @@ public class MainMenu
   public void MainMenuOptions(UserModel user)
   {
     //TODO: create method to populate devApps based on UserModel
-    devApps = PopulateDevAppList(user);
+    PopulateDevAppList();
     Console.WriteLine(ConsoleOutput.headerShort);
     Console.WriteLine("Main Menu");
     //TODO: Create summary view of all permit data on file taken from lists
@@ -19,6 +19,7 @@ public class MainMenu
     Console.WriteLine("1. View/Edit Development Applications");
     Console.WriteLine("2. View/Edit Applicants");
     Console.WriteLine("3. View/Edit Sites");
+    Console.WriteLine("8. Logout");
     Console.WriteLine("9. Exit");
     int selection = int.Parse(UserInput.GetInfo(""));
     MainMenuSelection(selection);
@@ -29,38 +30,31 @@ public class MainMenu
     switch(selection)
     {
       case 1:
-        ApplicantMenu applicant = new ApplicantMenu();
-        applicant.ApplicantMainMenu(devApplicants);
-        //applicant.DisplayAllSite();
-        //SiteOptions();
         break;
       case 2:
-        siteSession.EnterNewSite();
-        SiteOptions();
         break;
       case 3:
-        siteSession.RemoveSite();
-        SiteOptions();
-        break;
-      case 4:
-        siteSession.EditSite();
-        SiteOptions();
         break;
       case 8:
-        siteSession.InsertTempSiteData();
-        SiteOptions();
+        LoginMenu newSession = new LoginMenu();
+        newSession.LoginMenuOptions();
         break;
       case 9:
-        OverviewOptions();
+        ConsoleOutput.PrintProgramExit();
         break;
     }
   }
 
-  public List<DevAppModel> PopulateDevAppList(UserModel user)
+  public void PopulateDevAppList()
   {
-    List<DevAppModel> devApp = new List<DevAppModel>();
-
-    
+    DevAppModel new1 = new DevAppModel("1595 High St, Coquitlam");
+    DevAppModel new2 = new DevAppModel("15-25 Bottom Rd, Coquitlam");
+    DevAppModel new3 = new DevAppModel("66-88 Rutter Rd, Coquitlam");
+    DevAppModel new4 = new DevAppModel("200 Big Tree Lane, Coquitlam");
+    devApps.Add(new1);
+    devApps.Add(new2);
+    devApps.Add(new3);
+    devApps.Add(new4);
   }
   
 }

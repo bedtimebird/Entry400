@@ -5,11 +5,15 @@ using System.Linq;
 // Class to hold the high level development details
 // also holds a object that contains various development options (DevOpt) where site configurations
 // or other site can be easily compared against each other
-// TODO - future state: create templates for standard development types (6 storey strata / 8 storey rental ect...)
+// TODO - future-future state: create templates for standard development types (6 storey strata / 8 storey rental ect...)
 
 public class DevAppModel
 {
-
+  public DevAppModel(string name)
+  {
+    ProjName = name;
+    CompleteApp = false;
+  }
   public DevAppModel(){}
   
   public string ProjName{get;set;}
