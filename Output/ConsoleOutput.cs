@@ -13,11 +13,21 @@ public class ConsoleOutput
     return output;
   }
 
+  public static void DisplayActiveDevelopmentsNumber(List<DevAppModel> devApps)
+  {
+    PrintTitleShort("Active Developments");
+    int count = 1;
+    foreach(var item in devApps)
+    {
+      Console.WriteLine(count + ". " + item.ProjName);
+      count += 1;
+    }
+    Console.WriteLine(headerShort);
+  }
+
   public static void DisplayActiveDevelopments(List<DevAppModel> devApps)
   {
-    Console.WriteLine(headerShort);
-    Console.WriteLine("Active Developments");
-    Console.WriteLine(headerShort);
+    PrintTitleShort("Active Developments");
     foreach(var item in devApps)
     {
       Console.WriteLine(item.ProjName);
@@ -30,6 +40,13 @@ public class ConsoleOutput
     Console.WriteLine(header);
     Console.WriteLine(title);
     Console.WriteLine(header);
+  }
+
+  public static void PrintTitleShort(string title)
+  {
+    Console.WriteLine(headerShort);
+    Console.WriteLine(title);
+    Console.WriteLine(headerShort);
   }
 
   public static void PrintSiteModel(SiteModel site)
